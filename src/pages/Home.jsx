@@ -1,5 +1,5 @@
 import data from '../datas/logements.json'
-import Card from '../components/card.jsx'
+import Card from '../components/Card.jsx'
 
 function Home() {
   return (
@@ -7,7 +7,7 @@ function Home() {
       <section className='intro'>
         <h1>Chez vous, partout et ailleurs</h1>
       </section>
-      <section className='product'>
+      <section className='main'>
         <div className='cardContainer'>
           {data.map((logement) => (
             <Card

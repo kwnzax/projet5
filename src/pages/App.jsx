@@ -27,6 +27,7 @@ function App() {
           <Route index element={<Home />} /> 
           <Route path="about" element={<About />} />
           <Route path="logement/:id" element={<LogementDetail />} />
+          <Route path="/404" element={<NotFound/>}/>
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
