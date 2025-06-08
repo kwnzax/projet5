@@ -1,0 +1,19 @@
+// bases
+@import 'base/variable';
+@import 'base/base';
+
+// composents
+@import 'components/header';
+@import 'components/card';
+@import 'components/slider';
+@import 'components/tags';
+@import 'components/host';
+@import 'components/rating';
+@import 'components/collapse';
+@import 'components/footer';
+
+// pages
+@import 'pages/home';
+@import 'pages/logement';
+@import 'pages/about';
+@import 'pages/notFound';

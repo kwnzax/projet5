@@ -1,0 +1,19 @@
+.hostContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    gap: 20px;
+    p {
+        color: $primary-color;
+        font-size: 1.3em;
+        text-align: right;
+        justify-content: end;
+        padding-bottom: 15px;
+        max-width: 150px;
+    }
+    img {
+        border-radius: 50%;
+        height: 100px;
+    }
+}

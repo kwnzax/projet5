@@ -18,17 +18,17 @@ function Slider({ pictures }) {
     return (
         <div className="slider">
             {totalSlide > 1 && (
-                <>
-                    <button className="arrow left" onClick={prevSlide}>‹</button>
-                    <button className="arrow right" onClick={nextSlide}>›</button>
-                </>
+                <div className="sliderNavBtn">
+                    <button className="prevBtn" onClick={prevSlide}>‹</button>
+                    <button className="nextBtn" onClick={nextSlide}>›</button>
+                </div>
             )}
 
             <img
                 key={currentIndex}
                 src={pictures[currentIndex]}
                 alt={`Slide ${currentIndex + 1}`}
-                className="slide-image"
+                className="slideImage"
             />
 
             {totalSlide > 1 && (

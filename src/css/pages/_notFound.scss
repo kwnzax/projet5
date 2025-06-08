@@ -1,0 +1,23 @@
+.notFound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0;
+    gap: 80px;
+
+    h1 {
+        color: $primary-color;
+        font-size: 14em;
+    }
+
+    p {
+        color: $primary-color;
+        font-size: 1.9em;
+    }
+
+    a {
+        color: black;
+        padding-bottom: 30px;
+    }
+}

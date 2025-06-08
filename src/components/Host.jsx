@@ -1,7 +1,7 @@
 function Host({ name, picture }) {
     return (
         <div className="hostContainer">
-            <h2>{name}</h2>
+            <p>{name}</p>
             <img src={picture} />
         </div>
     )

@@ -1,12 +1,11 @@
-import aboutImg from '../assets/kasa-about-img.png'
 import data from '../datas/about.json'
-import CollapseItem from '../components/CollapseItem';
+import CollapseItem from '../components/Collapse';
 
 function About() {
   return (
-    <>
-      <div><img src={aboutImg} /></div>
-      <div>
+    <div className='pages'>
+      <div className='topImg'><div></div></div>
+      <div className='aboutContent'>
         {data.map((about) => (
           <CollapseItem
             key={about.title}
@@ -15,7 +14,7 @@ function About() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

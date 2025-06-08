@@ -6,7 +6,7 @@ import Slider from '../components/Slider';
 import Tags from '../components/Tags';
 import Host from '../components/Host';
 import Rating from '../components/Rating';
-import CollapseItem from '../components/CollapseItem';
+import CollapseItem from '../components/Collapse';
 
 function LogementDetail() {
     const { id } = useParams();
@@ -28,37 +28,45 @@ function LogementDetail() {
     }
 
     return (
-        <div className="logement-detail">
+        <div className="logementDetail pages">
 
             <Slider
                 pictures={logement.pictures}
             />
-            <div>
-                <div>
-                    <h1>{logement.title}</h1>
-                    <p><strong>Lieu :</strong> {logement.location}</p>
-                    <Tags
-                        tags={logement.tags}
-                    />
+            <div className="detailContainer">
+                <div className='detailMain'>
+                    <div className="infoContainer">
+                        <h1>{logement.title}</h1>
+                        <p>{logement.location}</p>
+                        <Tags
+                            tags={logement.tags}
+                        />
+                    </div>
+                    <div className="detailHost">
+                        <Host
+                            name={logement.host.name}
+                            picture={logement.host.picture}
+                        />
+                        <Rating
+                            rating={logement.rating}
+                        />
+                    </div>
                 </div>
-                <div>
-                    <Host
-                        name={logement.host.name}
-                        picture={logement.host.picture}
-                    />
-                    <Rating
-                        rating={logement.rating}
-                    />
-                </div>
+
                 <div className='collapseContainer'>
-                    <CollapseItem 
-                    title="Description"
-                    content={logement.description} 
-                    />
-                    <CollapseItem 
-                    title="Équipments"
-                    content={logement.equipments} 
-                    />
+                    <div>
+                        <CollapseItem
+                            title="Description"
+                            content={logement.description}
+                        />
+                    </div>
+
+                    <div className='equipements'>
+                        <CollapseItem
+                            title="Équipments"
+                            content={logement.equipments}
+                        />
+                    </div>
 
                 </div>
             </div>

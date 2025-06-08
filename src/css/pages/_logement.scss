@@ -1,0 +1,43 @@
+.logementDetail {
+    margin: 40px 0;
+
+    .detailMain {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 30px 0;
+
+        .infoContainer {
+
+            h1 {
+                color: $primary-color;
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+
+            p {
+                font-size: 1.2em;
+                margin-top: 10px;
+            }
+
+            .tagsContainer {
+                margin-top: 40px;
+            }
+        }
+
+    }
+
+    .collapseContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+        padding-top: 15px;
+        
+        div{
+            width: 97%;
+        }
+
+    }
+
+}

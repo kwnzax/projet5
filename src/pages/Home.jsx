@@ -3,7 +3,7 @@ import Card from '../components/Card.jsx'
 
 function Home() {
   return (
-    <>
+    <div className='home pages'>
       <section className='intro'>
         <h1>Chez vous, partout et ailleurs</h1>
       </section>
@@ -19,7 +19,7 @@ function Home() {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

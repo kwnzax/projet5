@@ -10,11 +10,16 @@ import NotFound from './NotFound'
 function Layout() {
   return (
     <>
-      <Header />
+      <header>
+        <Header />
+      </header>
       <main>
         <Outlet />
       </main>
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
+
     </>
   );
 }
@@ -24,10 +29,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} /> 
+          <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="logement/:id" element={<LogementDetail />} />
-          <Route path="/404" element={<NotFound/>}/>
+          <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

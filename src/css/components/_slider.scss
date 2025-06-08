@@ -1,0 +1,40 @@
+.slider {
+    position: relative;
+    margin: 0;
+    width: 1240px;
+    height: 415px;
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    .sliderNavBtn {
+        button {
+          all: unset; 
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          padding: 10px; 
+          color: white;
+          font-size: 125px;
+          text-shadow: $shadow;
+          cursor: pointer;
+        }
+
+        .nextBtn {
+            right: 0;
+        }
+    }
+
+    .counter {
+        position: absolute;
+        right: 50%;
+        bottom: 20px;
+        color: white;
+        text-shadow: $shadow;
+        font-weight: 500;
+    }
+}
