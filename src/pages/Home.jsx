@@ -5,7 +5,9 @@ function Home() {
   return (
     <div className='home pages'>
       <section className='intro'>
-        <h1>Chez vous, partout et ailleurs</h1>
+        <div className='introImg'>
+          <h1>Chez vous, partout et ailleurs</h1>
+        </div>
       </section>
       <section className='main'>
         <div className='cardContainer'>

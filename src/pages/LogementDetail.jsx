@@ -29,7 +29,6 @@ function LogementDetail() {
 
     return (
         <div className="logementDetail pages">
-
             <Slider
                 pictures={logement.pictures}
             />
@@ -43,13 +42,13 @@ function LogementDetail() {
                         />
                     </div>
                     <div className="detailHost">
-                        <Host
-                            name={logement.host.name}
-                            picture={logement.host.picture}
-                        />
-                        <Rating
-                            rating={logement.rating}
-                        />
+                            <Host
+                                name={logement.host.name}
+                                picture={logement.host.picture}
+                            />
+                            <Rating
+                                rating={logement.rating}
+                            />
                     </div>
                 </div>
 

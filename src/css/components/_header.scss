@@ -3,7 +3,7 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 20px 5px;
     max-width: 1240px;
     width: 100%;
 
@@ -24,6 +24,18 @@ nav {
 
         &:hover, &:focus {
             text-decoration: underline;
+        }
+    }
+
+    @media (max-width: 1024px) {
+
+        img {
+           height: 50px;
+        }
+
+        ul {
+            gap: 20px;
+            padding-left: 5px;
         }
     }
 }

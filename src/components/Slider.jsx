@@ -28,7 +28,6 @@ function Slider({ pictures }) {
                 key={currentIndex}
                 src={pictures[currentIndex]}
                 alt={`Slide ${currentIndex + 1}`}
-                className="slideImage"
             />
 
             {totalSlide > 1 && (

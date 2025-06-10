@@ -4,16 +4,20 @@ import CollapseItem from '../components/Collapse';
 function About() {
   return (
     <div className='pages'>
-      <div className='topImg'><div></div></div>
-      <div className='aboutContent'>
-        {data.map((about) => (
-          <CollapseItem
-            key={about.title}
-            title={about.title}
-            content={about.content}
-          />
-        ))}
-      </div>
+      <section className='aboutIntro'>
+        <div className='topImg'><div></div></div>
+      </section>
+      <section>
+        <div className='aboutContent'>
+          {data.map((about) => (
+            <CollapseItem
+              key={about.title}
+              title={about.title}
+              content={about.content}
+            />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

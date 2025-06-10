@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
@@ -9,10 +9,12 @@ function CollapseItem({ title, content }) {
         <div className="collapseItem">
             <div className='collapseTitle' onClick={() => setIsOpen(!isOpen)}>
                 <h2>{title}</h2>
-                <FontAwesomeIcon icon={faChevronUp} size="xl"/>
+                <FontAwesomeIcon icon={faChevronUp} size="xl" className={`chevronUp ${isOpen ? "rotate" : ""}`} />
             </div>
             {isOpen && (
-                <div className="collapseContent">{content}</div>
+                <div className='collapseContent'>
+                        {content}
+                </div>
             )}
         </div>
     )

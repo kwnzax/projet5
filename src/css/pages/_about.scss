@@ -1,9 +1,8 @@
 .topImg {
     background-image: url(../assets/kasa-about-img.png);
-    @include topImg; 
-    width: 1240px;
-    margin: 35px 0 ;
-    
+    @include topImg;
+    margin: 35px 0;
+
     div {
         position: absolute;
         background-color: rgba(0, 0, 0, 0.4);
@@ -13,9 +12,19 @@
 }
 
 .aboutContent {
-    padding: 0 60px;
+    padding: 0 100px;
 
     .collapseItem {
         padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .aboutIntro {
+        padding: 0 10px;
+    }
+
+    .aboutContent {
+        padding: 0 10px;
     }
 }
