@@ -26,8 +26,19 @@
     background-color: $secondary-color;
     position: relative;
     top: -15px;
-    padding: 15px;
-    padding-top: 30px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+
+    .collapseInner {
+        padding: 15px;
+        padding-top: 25px;
+
+        ul {
+            list-style-type: none;
+            padding-left: 15px;
+        }
+    }
 }

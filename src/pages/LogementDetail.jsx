@@ -42,30 +42,25 @@ function LogementDetail() {
                         />
                     </div>
                     <div className="detailHost">
-                            <Host
-                                name={logement.host.name}
-                                picture={logement.host.picture}
-                            />
-                            <Rating
-                                rating={logement.rating}
-                            />
+                        <Host
+                            name={logement.host.name}
+                            picture={logement.host.picture}
+                        />
+                        <Rating
+                            rating={logement.rating}
+                        />
                     </div>
                 </div>
 
                 <div className='collapseContainer'>
-                    <div>
-                        <CollapseItem
-                            title="Description"
-                            content={logement.description}
-                        />
-                    </div>
-
-                    <div className='equipements'>
-                        <CollapseItem
-                            title="Équipments"
-                            content={logement.equipments}
-                        />
-                    </div>
+                    <CollapseItem
+                        title="Description"
+                        content={logement.description}
+                    />
+                    <CollapseItem
+                        title="Équipments"
+                        content={logement.equipments}
+                    />
 
                 </div>
             </div>

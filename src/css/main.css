@@ -177,10 +177,19 @@ nav a:hover, nav a:focus {
   background-color: #F6F6F6;
   position: relative;
   top: -15px;
-  padding: 15px;
-  padding-top: 30px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.collapseContent .collapseInner {
+  padding: 15px;
+  padding-top: 25px;
+}
+.collapseContent .collapseInner ul {
+  list-style-type: none;
+  padding-left: 15px;
 }
 
 .kasaFooter {
@@ -251,6 +260,9 @@ nav a:hover, nav a:focus {
   }
 }
 @media (max-width: 767.98px) {
+  .home .intro h1 {
+    text-align: center;
+  }
   .home .cardContainer {
     grid-template-columns: 1fr;
     background-color: white;
@@ -286,9 +298,9 @@ nav a:hover, nav a:focus {
   padding-top: 15px;
 }
 .logementDetail .collapseContainer div {
-  width: 97%;
+  flex: 1;
+  min-width: 0;
 }
-
 @media (max-width: 1024px) {
   .logementDetail {
     padding: 0 10px;
@@ -296,32 +308,51 @@ nav a:hover, nav a:focus {
   .logementDetail .slider {
     padding: 0 10px;
   }
-  .logementDetail .detailMain {
-    flex-direction: column;
-  }
-  .logementDetail .detailMain .infoContainer {
+  .logementDetail .detailContainer {
     padding: 10px;
   }
-  .logementDetail .detailMain .detailHost {
+  .logementDetail .detailContainer .detailMain {
+    flex-direction: column;
+  }
+  .logementDetail .detailContainer .detailMain .infoContainer {
+    padding: 10px;
+  }
+  .logementDetail .detailContainer .detailMain .detailHost {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
   }
-  .logementDetail .detailMain .detailHost .hostContainer {
+  .logementDetail .detailContainer .detailMain .detailHost .hostContainer {
     order: 2;
   }
-  .logementDetail .detailMain .detailHost p {
+  .logementDetail .detailContainer .detailMain .detailHost p {
     max-width: 130px;
   }
-  .logementDetail .collapseContainer {
+  .logementDetail .detailContainer .collapseContainer {
     flex-direction: column;
     gap: 20px;
-    padding: 10px;
-    padding-left: 0;
-    align-items: center;
     width: 100%;
   }
 }
+@media (max-width: 465px) {
+  .logementDetail .detailHost {
+    display: flex;
+    flex-direction: column !important;
+    gap: 15px;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .logementDetail .detailHost .hostContainer {
+    gap: 5px;
+  }
+  .logementDetail .detailHost .hostContainer p {
+    text-align: left;
+  }
+  .logementDetail .detailHost .rating {
+    order: 2;
+  }
+}
+
 .topImg {
   background-image: url(../assets/kasa-about-img.png);
   height: 223px;
@@ -334,7 +365,6 @@ nav a:hover, nav a:focus {
   margin: 35px 0;
 }
 .topImg div {
-  position: absolute;
   background-color: rgba(0, 0, 0, 0.4);
   height: 223px;
   border-radius: 25px;

@@ -35,33 +35,38 @@
         padding-top: 15px;
 
         div {
-            width: 97%;
+            flex: 1;
+            min-width: 0;
         }
     }
-}  
- 
-@media (max-width: 1024px) {
-        .logementDetail {
-            padding: 0 10px;
 
-            .slider{
-                padding: 0 10px;
-            }
+    @media (max-width: 1024px) {
+        padding: 0 10px;
+
+        .slider {
+            padding: 0 10px;
+        }
+
+        .detailContainer {
+            padding: 10px;
 
             .detailMain {
                 flex-direction: column;
-                .infoContainer{
+
+                .infoContainer {
                     padding: 10px;
                 }
 
                 .detailHost {
                     display: flex;
                     flex-direction: row;
-                    justify-content: center;
+                    justify-content: space-between;
+                  
                     .hostContainer {
                         order: 2;
                     }
-                    p{
+
+                    p {
                         max-width: 130px;
                     }
                 }
@@ -70,10 +75,30 @@
             .collapseContainer {
                 flex-direction: column;
                 gap: 20px;
-                padding: 10px;
-                padding-left: 0;
-                align-items: center;
                 width: 100%;
+            }
+
+        }
+    }  
+    
+    @media (max-width: 465px) {
+        .detailHost {
+            display: flex;
+            flex-direction: column !important;
+            gap: 15px;
+            align-items: center;
+            padding-top: 10px;
+
+            .hostContainer {
+                gap: 5px;
+                p {
+                    text-align: left;
+                }
+            }
+
+            .rating {
+                order: 2;
             }
         }
     }
+}
