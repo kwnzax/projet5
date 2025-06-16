@@ -35,5 +35,9 @@
         color: white;
         text-shadow: $shadow;
         font-weight: 500;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
     }
 }
